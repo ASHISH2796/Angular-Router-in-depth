@@ -22,8 +22,6 @@ export class LoadingComponent implements OnInit {
 
   ngOnInit() {
     if(this.detectRoutingOngoing){
-        
-    }
     this.router.events.subscribe(
       event=>{
         if(event instanceof NavigationStart  || event instanceof RouteConfigLoadStart ){
@@ -35,6 +33,7 @@ export class LoadingComponent implements OnInit {
       }
     );
   }
+}
 
 
 }
